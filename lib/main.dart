@@ -49,9 +49,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Theme.of(context).appBarTheme.backgroundColor, // ✅ 테마 적용
       elevation: Theme.of(context).appBarTheme.elevation, // ✅ 테마 적용
       titleSpacing: 0,
-      leading: const Padding(
+      leading: Padding(
         padding: EdgeInsets.only(left: 16.0), // 왼쪽 여백
-        child: Icon(Icons.article, color: Colors.red), // PASS 로고 대신 아이콘 사용
+        child: Image.asset(
+          'assets/apple_logo.png', // 이미지 파일 경로
+          //width: 24, // 아이콘 크기 조절
+          //height: 24,
+        ),
       ),
       actions: const [
         Padding(
